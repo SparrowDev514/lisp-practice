@@ -2,7 +2,7 @@
 
 ## 環境構築
 
-- homebrew を使って reswell をいれる
+- homebrew を使って roswell をいれる
   - これだけ(2021/2/18 現在)
 - `ros emacs` で roswell 上で slime 入りの emacs が動くようになる
 
