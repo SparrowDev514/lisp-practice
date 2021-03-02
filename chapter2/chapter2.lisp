@@ -1,17 +1,53 @@
-unmatched close parenthesis
+; SLIME 2.26.1
+CL-USER> (defparameter *small* 1)
+*SMALL*
+CL-USER> (defparameter *big* 100)
+*BIG*
+CL-USER> (defparameter *foo* 5)
+*FOO*
+CL-USER> (defparameter *foo* 10)
+; in: DEFPARAMTETR *FOO*
+;     (DEFPARAMTETR *FOO* 10)
+; 
+; caught STYLE-WARNING:
+;   undefined function: COMMON-LISP-USER::DEFPARAMTETR
+; 
+; compilation unit finished
+;   Undefined function:
+;     DEFPARAMTETR
+;   caught 1 STYLE-WARNING condition
+ (defparameter *foo* 10)
+*FOO*
+CL-USER> 
+; No value; Evaluation aborted on #<UNDEFINED-FUNCTION DEFPARAMTETR {1003269363}>.
 
-  Stream: #<dynamic-extent STRING-INPUT-STREAM (unavailable) from "(defvar ...">
-   [Condition of type SB-INT:SIMPLE-READER-ERROR]
-
-Restarts:
- 0: [RETRY] Retry SLIME REPL evaluation request.
- 1: [*ABORT] Return to SLIME's top level.
- 2: [ABORT] abort thread (#<THREAD "repl-thread" RUNNING {1003638813}>)
-
-Backtrace:
-  0: (SB-IMPL::READ-RIGHT-PAREN #<SB-IMPL::STRING-INPUT-STREAM {3841053}> #<unused argument>)
-  1: (SB-IMPL::READ-MAYBE-NOTHING #<SB-IMPL::STRING-INPUT-STREAM {3841053}> #\))
-  2: (SB-IMPL::%READ-PRESERVING-WHITESPACE #<SB-IMPL::STRING-INPUT-STREAM {3841053}> NIL (NIL) T)
-  3: (SB-IMPL::%READ-PRESERVING-WHITESPACE #<SB-IMPL::STRING-INPUT-STREAM {3841053}> NIL (NIL) NIL)
-  4: (READ #<SB-IMPL::STRING-INPUT-STREAM {3841053}> NIL #<SB-IMPL::STRING-INPUT-STREAM {3841053}> NIL)
- --more--
+CL-USER> (defparameter *foo* 5)
+CL-USER> (defparameter *foo* 5)
+*FOO*
+CL-USER> *foo*
+5
+CL-USER> (defparameter *foo* 10)
+*FOO*
+CL-USER> *foo*
+10
+CL-USER> (defvar *bar* 5)
+*FOO*
+CL-USER> *foo*
+10
+CL-USER> (defvar *bar* 10)
+*BAR*
+CL-USER> *bar*
+5
+CL-USER> (defvar *bar* 10)
+*BAR*
+CL-USER> *bar*
+5
+CL-USER> 
+; No value
+CL-USER> *bar*
+5
+CL-USER> 
+; No value
+CL-USER> 
+; No value
+CL-USER> 
