@@ -14,5 +14,5 @@
   - 要素の二つ目を取り出す(要素の最初を取り除く)<br>
     `(cdr (aaa bbb ccc)) -> (bbb ccc)`
 - list
-  - 要素を組み合わせてリストを作る
+  - 要素を組み合わせてリストを作る<br>
     `(list 'aaa 'bbb 'ccc) -> (aaa bbb ccc)`
