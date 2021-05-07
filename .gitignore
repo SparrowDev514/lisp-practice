@@ -3,4 +3,4 @@ references
 *.fasl
 *.lisp~
 *.lisp#
-.#
+.#*
