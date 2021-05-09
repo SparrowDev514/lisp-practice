@@ -20,3 +20,19 @@
 ```
 
 =>コンパイルエラー
+
+- progn を使うとその限りではない。
+
+```
+(defvar *number-was-odd* nil)
+(if (oddp 5)
+    (progn (setf *number-was-odd* t)
+           (print "odd-number")
+           )
+    (print "even-number")
+    ) => / "odd-number"
+(print *number-was-odd*) => / T
+
+```
+
+=>コンパイルエラーはでない
