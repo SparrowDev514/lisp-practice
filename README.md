@@ -34,3 +34,5 @@
 [Roswell で Common Lisp 環境をセットアップする](https://takoeight0821.hatenablog.jp/entry/2017/03/11/230000)
 
 [Emacs CHEAT SHEET](https://gihyo.jp/assets/files/magazine/SD/2015/201510/download/Furoku_CheatSheet_Emacs.pdf)
+
+[SLIME:SLDB(エラー時の処理)](https://lisphub.jp/common-lisp/cookbook/index.cgi?SLIME%3ASLDB#H-wpnemf)
