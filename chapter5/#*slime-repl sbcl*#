@@ -1,0 +1,48 @@
+; SLIME 2.27; processing (DEFUN DESCRIBE-PATH ...)
+; processing (DEFPARAMETER *NODES* ...)
+; processing (DEFPARAMETER *EDGES* ...)
+; processing (DEFUN DESCRIBE-LOCATION ...)
+; processing (DEFUN DESCRIBE-PATH ...)
+; processing (DEFUN DESCRIBE-PATHS ...)
+
+; file: /var/tmp/slimeQFh32O
+; in: DEFUN DESCRIBE-PATHS
+;     (MAPCAR #'DESCIBE-PATH (CDR (ASSOC LOCATION EDGES)))
+; 
+; caught STYLE-WARNING:
+;   undefined function: COMMON-LISP-USER::DESCIBE-PATH
+; 
+; compilation unit finished
+;   Undefined function:
+;     DESCIBE-PATH
+;   caught 1 STYLE-WARNING condition
+; processing (DEFUN DESCRIBE-PATH ...)
+; processing (DEFUN DESCRIBE-PATHS ...)
+
+; file: /var/tmp/slimezIs9ee
+; in: DEFUN DESCRIBE-PATHS
+;     (MAPCAR #'DESCIBE-PATH (CDR (ASSOC LOCATION EDGES)))
+; 
+; caught STYLE-WARNING:
+;   undefined function: COMMON-LISP-USER::DESCIBE-PATH
+; 
+; compilation unit finished
+;   Undefined function:
+;     DESCIBE-PATH
+;   caught 1 STYLE-WARNING condition
+; processing (DEFUN DESCRIBE-PATHS ...)
+CL-USER> (describe-paths 'living-room *edges*)
+
+(THERE IS A DOOR GOING DOOR FROM HERE. THERE IS A LADDER GOING LADDER FROM
+ HERE.)
+CL-USER> (cdr (assoc 'living-room *edges*))
+((GARDEN WEST DOOR) (ATTIC UPSTAIR LADDER))
+CL-USER> (assoc 'garden *edges*)
+(LIVING-ROOM (GARDEN WEST DOOR) (ATTIC UPSTAIR LADDER))
+CL-USER> (assoc 'attic *edges*)
+(GARDEN (LIVING-ROOM))
+CL-USER> (assoc 'attic *edges*)
+(ATTIC (LIVING-ROOM DOWNSTAIRS LADDER))
+CL-USER> call-arguments-limit
+4611686018427387903
+CL-USER> (objects-at 'living-room *objects* *object-locations*)
